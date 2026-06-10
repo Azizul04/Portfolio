@@ -13,10 +13,10 @@ html {
 body {
     background: #0a0f1c;
     color: white;
-    padding-top: 70px;
+    padding-top: 80px;
 }
 
-/* NAV */
+/* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
@@ -24,8 +24,10 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 18px 40px;
-    background: rgba(10, 15, 28, 0.8);
-    backdrop-filter: blur(12px);
+    background: rgba(10, 15, 28, 0.75);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(56,189,248,0.1);
+    z-index: 1000;
 }
 
 .logo {
@@ -70,16 +72,23 @@ nav a:hover {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
 }
 
 /* SECTIONS */
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
+    animation: fadeUp 0.8s ease;
 }
 
 .section.dark {
-    background: #111827;
+    background: linear-gradient(180deg, #111827, #0a0f1c);
 }
 
 /* GRID */
@@ -95,31 +104,33 @@ nav a:hover {
     background: #1e293b;
     padding: 20px;
     border-radius: 12px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(56,189,248,0.18);
 }
 
-/* PROFILE */
-.profile-container {
-    margin: 20px 0;
-}
-
-.profile-pic {
-    width: 160px;
-    height: 160px;
+/* PROFILE IMAGE */
+.profile-img {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
+    margin-top: 20px;
     border: 3px solid #38bdf8;
-    box-shadow: 0 0 20px rgba(56,189,248,0.4);
+    box-shadow: 0 0 25px rgba(56,189,248,0.4);
+    transition: 0.3s ease;
 }
 
-/* TEXT */
-.text {
-    max-width: 600px;
-    margin: auto;
+.profile-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(56,189,248,0.6);
+}
+
+/* CONTACT TEXT */
+#contact p {
     color: #cbd5e1;
 }
 
@@ -131,119 +142,7 @@ footer {
     color: #64748b;
 }
 
-.form-card {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.form-card input,
-.form-card textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    background: #0f172a;
-    color: white;
-    border: 1px solid #334155;
-}
-
-.form-card input:focus,
-.form-card textarea:focus {
-    border-color: #38bdf8;
-}
-
-.card-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.card-link:hover {
-    text-decoration: underline;
-}
-
-/* ===== ELITE UPGRADES ===== */
-
-/* SMOOTHER CARD ANIMATION */
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(56,189,248,0.18);
-}
-
-/* BUTTON UPGRADE */
-.btn {
-    padding: 12px 20px;
-    background: #38bdf8;
-    color: black;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-    background: #0ea5e9;
-}
-
-/* NAVBAR PREMIUM LOOK */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 40px;
-    background: rgba(10, 15, 28, 0.75);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(56,189,248,0.1);
-    z-index: 1000;
-}
-
-/* SECTION SMOOTHER LOOK */
-.section {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-/* DARK SECTION GRADIENT */
-.section.dark {
-    background: linear-gradient(180deg, #111827, #0a0f1c);
-}
-
-/* PROFILE IMAGE UPGRADE */
-.profile-pic {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #38bdf8;
-    box-shadow: 0 0 25px rgba(56,189,248,0.4);
-    transition: 0.3s ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 40px rgba(56,189,248,0.6);
-}
-
-/* FADE IN ANIMATION */
-.section {
-    animation: fadeUp 0.8s ease;
-}
-
+/* FADE ANIMATION */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -253,13 +152,4 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 20px;
-    border: 3px solid white;
 }
