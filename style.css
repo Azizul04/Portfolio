@@ -166,3 +166,91 @@ footer {
 .card-link:hover {
     text-decoration: underline;
 }
+
+/* ===== ELITE UPGRADES ===== */
+
+/* SMOOTHER CARD ANIMATION */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(56,189,248,0.18);
+}
+
+/* BUTTON UPGRADE */
+.btn {
+    padding: 12px 20px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
+}
+
+/* NAVBAR PREMIUM LOOK */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: rgba(10, 15, 28, 0.75);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(56,189,248,0.1);
+    z-index: 1000;
+}
+
+/* SECTION SMOOTHER LOOK */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* DARK SECTION GRADIENT */
+.section.dark {
+    background: linear-gradient(180deg, #111827, #0a0f1c);
+}
+
+/* PROFILE IMAGE UPGRADE */
+.profile-pic {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 25px rgba(56,189,248,0.4);
+    transition: 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(56,189,248,0.6);
+}
+
+/* FADE IN ANIMATION */
+.section {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
