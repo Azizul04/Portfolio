@@ -177,3 +177,18 @@ footer {
     margin: auto;
     color: #cbd5e1;
 }
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 10px 30px rgba(56,189,248,0.3);
+}
